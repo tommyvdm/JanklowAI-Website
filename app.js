@@ -108,7 +108,7 @@ if (canvas) {
       this.vx = (Math.random() - 0.5) * 0.8;
       this.vy = (Math.random() - 0.5) * 0.8;
       this.radius = Math.random() * 3 + 1;
-      this.hue = Math.random() * 60 + 200; // Blue to cyan range
+      this.hue = 0; // Black and white particles
     }
     
     update() {
@@ -150,8 +150,8 @@ if (canvas) {
         this.x, this.y, 0,
         this.x, this.y, this.radius
       );
-      gradient.addColorStop(0, `hsla(${this.hue}, 70%, 60%, 1)`);
-      gradient.addColorStop(1, `hsla(${this.hue}, 70%, 60%, 0)`);
+      gradient.addColorStop(0, `rgba(255, 255, 255, ${this.opacity})`);
+      gradient.addColorStop(1, `rgba(255, 255, 255, 0)`);
       
       ctx.fillStyle = gradient;
       ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
@@ -185,7 +185,7 @@ if (canvas) {
         if (distance < 120) {
           ctx.save();
           ctx.globalAlpha = (120 - distance) / 120 * 0.2;
-          ctx.strokeStyle = '#0066ff';
+          ctx.strokeStyle = 'rgba(255, 255, 255, 0.3)';
           ctx.lineWidth = 1;
           ctx.beginPath();
           ctx.moveTo(particle.x, particle.y);
