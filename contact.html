@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- —— Meta —— -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact | Janklow.ai</title>
+  <meta name="description" content="Let’s talk about where AI can add measurable ROI in your business." />
+
+  <!-- Shared assets (fonts, icons, CSS) -->
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+  <!-- ═════════ NAV (shared) ═════════ -->
+  <header class="top-nav" role="banner">
+    <div class="container nav-inner">
+      <a href="index.html" class="logo" aria-label="Janklow.ai home">Janklow<span>.ai</span></a>
+      <nav aria-label="Primary">
+        <input type="checkbox" id="menu-toggle" aria-label="Open menu" />
+        <label for="menu-toggle" class="hamburger"><span></span></label>
+        <ul class="nav-links">
+          <li><a href="services.html">Services</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html" class="btn-cta" aria-current="page">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ═════════ HERO ═════════ -->
+  <section class="page-hero">
+    <div class="container">
+      <h1>Let’s Build Your AI Edge</h1>
+      <p>Tell us the pain‑point, we’ll outline the fastest path to tangible ROI.</p>
+    </div>
+  </section>
+
+  <!-- ═════════ CONTACT FORM ═════════ -->
+  <section class="contact-form">
+    <div class="container form-wrapper">
+      <form action="https://formspree.io/f/mnndeljk" method="POST">
+        <div class="field">
+          <label for="name">Name<span aria-hidden="true">*</span></label>
+          <input id="name" type="text" name="name" required />
+        </div>
+        <div class="field">
+          <label for="email">Email<span aria-hidden="true">*</span></label>
+          <input id="email" type="email" name="_replyto" required />
+        </div>
+        <div class="field">
+          <label for="company">Company</label>
+          <input id="company" type="text" name="company" />
+        </div>
+        <div class="field">
+          <label for="message">Tell us about your company.</label>
+          <textarea id="message" name="message" rows="6" required></textarea>
+        </div>
+        <button type="submit" class="btn-primary">Send Message</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- ═════════ FOOTER ═════════ -->
+  <footer class="footer" role="contentinfo">
+    <div class="container footer-inner">
+      <p>© 2025 Janklow.ai · Sioux Falls, SD · <a href="mailto:info@janklowai.xyz">info@janklowai.xyz</a></p>
+      <div class="social">
+        <a href="https://linkedin.com" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+        <a href="https://twitter.com" aria-label="X / Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+        <a href="https://github.com" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ═════════ SCRIPTS ═════════ -->
+  <script src="app.js" defer></script>
+</body>
+</html>

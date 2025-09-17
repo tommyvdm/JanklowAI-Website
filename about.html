@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- —— Meta —— -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About | Janklow.ai</title>
+  <meta name="description" content="Eight years building production‑grade AI, automation, and blockchain systems—delivered without the agency bloat." />
+
+  <!-- Shared assets -->
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- Page‑specific tweaks -->
+  <style>
+    .page-hero{background:var(--bg-dark);color:var(--text-light);padding:4.5rem 0;text-align:center}
+    .page-hero h1{font-size:clamp(2.1rem,6vw,3.2rem);font-weight:700;margin-bottom:.6rem}
+    .page-hero p{font-size:1.15rem;max-width:720px;margin-inline:auto}
+
+    .about-grid{display:grid;grid-template-columns:minmax(260px,1fr) 2fr;gap:3rem;align-items:flex-start}
+    @media(max-width:840px){.about-grid{grid-template-columns:1fr}}
+    .bio h2{font-size:1.55rem;margin-bottom:1rem}
+    .values-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:1.7rem;margin-top:2.75rem}
+    .value-card{background:var(--bg-light);border:1px solid rgba(0,0,0,.05);padding:1.6rem 1.4rem;border-radius:var(--r);box-shadow:var(--sh);transition:transform .28s}
+    .value-card:hover{transform:translateY(-4px)}
+    .value-card i{font-size:1.7rem;color:var(--orange);margin-bottom:.9rem}
+    .value-card h3{font-size:1.18rem;margin-bottom:.55rem}
+
+    .timeline{border-left:4px solid var(--blue);padding-left:1.6rem;list-style:none;margin-top:2.5rem}
+    .timeline li{position:relative;margin-bottom:1.6rem}
+    .timeline li::before{content:'';position:absolute;left:-10px;top:.4rem;width:12px;height:12px;border-radius:50%;background:var(--blue)}
+    .timeline time{font-weight:600;color:var(--orange);font-size:.92rem}
+    .timeline p{margin-top:.25rem}
+  </style>
+</head>
+<body>
+  <!-- NAV (shared) -->
+  <header class="top-nav" role="banner">
+    <div class="container nav-inner">
+      <a href="index.html" class="logo" aria-label="Janklow.ai home">Janklow<span>.ai</span></a>
+      <nav aria-label="Primary">
+        <input type="checkbox" id="menu-toggle" aria-label="Open menu" />
+        <label for="menu-toggle" class="hamburger"><span></span></label>
+        <ul class="nav-links">
+          <li><a href="services.html">Services</a></li>
+          <li><a href="about.html" aria-current="page">About</a></li>
+          <li><a href="contact.html" class="btn-cta">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- INTRO STRIP -->
+  <section class="page-hero">
+    <div class="container">
+      <h1>About Janklow.ai</h1>
+      <p>Boutique consultancy turning cutting‑edge AI into measurable, bottom‑line results—partnering directly with companies that demand senior talent, not slide decks.</p>
+    </div>
+  </section>
+
+  <!-- BIO + STATS -->
+  <section class="about-details">
+    <div class="container about-grid">
+      <!-- Bio -->
+      <div class="bio">
+        <h2>Will Janklow — Founder &amp; Principal Engineer</h2>
+        <p>For the past eight years I’ve architected AI, blockchain, and automation systems that quietly move <em>real</em> revenue. From <strong>cross‑chain trading bots</strong> to <strong>LLM‑powered support agents</strong>, my success metric is simple: dollars saved or earned in production.</p>
+        <p>I’ve shipped generative‑media pipelines, hardened on‑prem LLM deployments, and built real‑time analytics that surface insights the moment data lands. The playbook stays constant: choose the right tool, prove value fast, then iterate.</p>
+        <p><strong>Engagement model:</strong> direct Slack access, weekly sprint vids, zero junior hand‑offs.</p>
+
+        <!-- Timeline -->
+        <ul class="timeline">
+          <li><time>2025</time><p>Launched <em>Omnichat</em>, a vector‑search RAG chatbot adopted by 40&nbsp;+ Shopify stores.</p></li>
+          <li><time>2024</time><p>Streamlined marketing‑to‑sales pipeline for DCH, boosting lead throughput 2.5 ×.</p></li>
+          <li><time>2022</time><p>Deployed cross‑chain trading bot on Ethereum &amp; Solana; open‑sourced the Python SDK.</p></li>
+          <li><time>2017</time><p>Built first ML‑driven fraud rules engine for a crypto OTC desk.</p></li>
+        </ul>
+      </div>
+
+      <!-- Stats (auto animates) -->
+      <div class="stats">
+        <div class="stat"><span class="num" data-value="8">0</span><span class="label">Years in AI/ML</span></div>
+        <div class="stat"><span class="num" data-value="45">0</span><span class="label">Projects Delivered</span></div>
+        <div class="stat"><span class="num" data-value="150">0</span><span class="label">Million USD Value Created</span></div>
+        <div class="stat"><span class="num" data-value="3">0</span><span class="label">Continents Served</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- VALUES -->
+  <section class="values" aria-label="Core principles">
+    <div class="container">
+      <h2 style="text-align:center;margin-bottom:2.2rem">Engineering Principles</h2>
+      <div class="values-grid">
+        <div class="value-card"><i class="fa-solid fa-gauge-high"></i><h3>Speed to Signal</h3><p>Ship the thin slice that proves—or kills—the idea inside two sprints.</p></div>
+        <div class="value-card"><i class="fa-solid fa-shield-halved"></i><h3>Security by Default</h3><p>Key‑scoped vaults, zero‑trust nets, and audit logs from day one.</p></div>
+        <div class="value-card"><i class="fa-solid fa-arrows-spin"></i><h3>Automate the Automator</h3><p>CI/CD pipelines and self‑healing ops so features—not fire‑fighting—consume cycles.</p></div>
+        <div class="value-card"><i class="fa-solid fa-chess-knight"></i><h3>Tech for Advantage</h3><p>Use GPT‑4o, Rust, Solidity, or bash—whatever maximizes your moat.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-banner" style="padding:3rem 1rem">
+    <div class="container">
+      <h2>Ready to quantify your AI upside?</h2>
+      <p>Grab a 30‑minute discovery call—no slides, just architectures and numbers.</p>
+      <a href="contact.html" class="btn-primary">Book a Quick Chat</a>
+    </div>
+  </section>
+
+   <!-- ═══════════ FOOTER ═══════════ -->
+  <footer class="footer" role="contentinfo">
+    <div class="container footer-inner">
+      <p>© 2025 Janklow.ai <a href="mailto:info@janklow.ai">info@janklow.ai</a></p>
+    
+      </div>
+    </div>
+  </footer>
+
+  <!-- Shared scripts -->
+  <script src="app.js" defer></script>
+</body>
+</html>
